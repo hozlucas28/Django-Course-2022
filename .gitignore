@@ -85,6 +85,7 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
+blogdb.sqlite3
 db.sqlite3-journal
 
 
