@@ -60,6 +60,9 @@
         <li>
             <a href="https://github.com/hozlucas28/Flask-Course-2022" target="_blank">Repository of Flask course</a>
         </li>
+        <li>
+            <a href="https://github.com/hozlucas28/API-Rest-Express-Course-2022" target="_blank">Repository of API REST - Express course</a>
+        </li>
     </ul>
 </p>
 
