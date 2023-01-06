@@ -1,9 +1,9 @@
 # Importación
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 
 # ---------------------------------- Páginas --------------------------------- #
 
 # Inicio
 def index(request):
-    return HttpResponse("<h1>Página de Inicio - Core</h1>")
+    return render(request, "index.html")

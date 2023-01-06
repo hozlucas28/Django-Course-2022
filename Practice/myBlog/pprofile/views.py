@@ -10,14 +10,13 @@
 # ------------------------------------------------------------------------- #
 
 # Importaciones
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from .models import Project
 
 
-# ---------------------------------- Páginas --------------------------------- #
+# ---------------------------------- Vistas ---------------------------------- #
 
 # Inicio.
 def index(request):
     projects = Project.objects.all()
-    print(projects)
-    return HttpResponse(projects)
+    return render(request, "profile.html", {"projects": projects})

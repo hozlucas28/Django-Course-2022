@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Blog Personal - Inicio
+{% endblock title %}
+
+{% block bodyClass %}
+	class="home-body"
+{% endblock bodyClass %}
+
+{% block main %}
+	<main class="home-main">
+		<div class="main-container">
+			<p class="main-container__text">Conoce las novedades y noticias del Mundo Tegnológico</p>
+			<a class="main-container__link" href="{% url 'blogs' %}">Entra ya!</a>
+		</div>
+	</main>
+{% endblock main %}
+
+{% block contact %} {% endblock contact %}
+
+{% block footer %} {% endblock footer %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Blog Personal - {{ post.title }}
+{% endblock title %}
+
+{% block main %}
+    <main class="main-blog">
+        <div class="main-blog__content">
+            <img src="{% static 'img/pc-img.jpg' %}" alt="">
+            <article class="blog-content__article">
+                <h4>Noticia</h4>
+                <h1>{{ post.title }}</h1>
+                <div>{{ post.content|safe }}</div>
+            </article>
+        </div>
+    </main>
+{% endblock main %}

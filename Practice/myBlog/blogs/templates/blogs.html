@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Blog Personal - Blogs
+{% endblock title %}
+
+{% block main %}
+    <main class="blogs-main">
+        <section class="news">
+            <div class="news-content">
+                <h3>Noticias</h3>
+                <img src="{{ firstPost.image.url }}" alt="img de blog">
+                <div class="news-info">
+                    <h2>{{ firstPost.title }}</h2>
+                    <p>{{ firstPost.description }}</p>
+                    <a class="blogs-btn" href="{% url 'post' firstPost.id %}">Leer más</a>
+                </div>
+            </div>
+        </section>
+        <section class="posts">
+            <h3>Últimos Blogspost</h3>
+            {% for post in posts %}
+                <div class="posts-blog">
+                    <img src="{{ post.image.url }}" alt="">
+                    <h4>{{ post.title }}</h4>
+                    <p>{{ post.description }}</p>
+                    <a class="blogs-btn" href="{% url 'post' post.id %}">Leer más</a>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+{% endblock main %}
+
+{% block contact %} {% endblock contact %}

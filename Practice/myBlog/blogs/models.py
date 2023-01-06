@@ -24,7 +24,7 @@ class Post(models.Model):
         verbose_name_plural = "Publicaciones"
         ordering = ["-dateUpdated"]  # Orden inicial.
 
-    image = models.ImageField(verbose_name="Imagen", upload_to="blog")
+    image = models.ImageField(verbose_name="Imagen", upload_to="blogs")
     title = models.CharField(verbose_name="Título", max_length=200)
     description = models.TextField(verbose_name="Descripción")
     content = RichTextField(verbose_name="Contenido")

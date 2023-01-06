@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Aplicaciones - myBlog
     "core.apps.CoreConfig",
-    "blog.apps.BlogConfig",
+    "blogs.apps.BlogsConfig",
     "pprofile.apps.PprofileConfig",
     # Aplicaciones - Django
     "django.contrib.admin",
@@ -131,5 +131,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Media files (JPG, PNG, SVG)
 
-MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "data"
+MEDIA_URL = "data/"
