@@ -4,18 +4,22 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="robots" content="index, follow" />
+		<meta name="Author" lang="es" content="Hoz Lucas" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="Udemy, HTML, CSS, Python, Django, Blog personal" />
+		<link rel="shortcut icon" href="{% static 'Img/logo.ico' %}" type="image/x-icon" />
+		<meta name="description" content="Blog realizado con HTML, CSS, Python y Django - Curso Django, plataforma Udemy." />
+		<link rel="stylesheet" href="{% static 'CSS/all.min.css' %}" />
+		{% block CSSStylesheets %} {% endblock CSSStylesheets %}
 		<title>{% block title %} {% endblock title %}</title>
-		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/media-query.css' %}" />
 	</head>
 
 	<body {% block bodyClass %} {% endblock bodyClass %}>
 		<header class="header">
-			<div class="social">
-				<div class="social-icons">
+			<div class="header-containerSocialMedia">
+				<div class="header-containerSocialMedia-icons">
 					<a href=""><i class="fab fa-facebook"></i></a>
 					<a href=""><i class="fab fa-youtube"></i></a>
 					<a href=""><i class="fab fa-twitter"></i></a>
@@ -24,13 +28,13 @@
 				</div>
 			</div>
 
-			<nav class="nav">
-				<div class="nav-logo">
+			<nav class="header-containerNav">
+				<div class="header-containerNav-homeLogo">
 					<a href="{% url 'home' %}">
-						<img src="{% static 'img/logo.png' %}" alt="Logo de la Pagina" />
+						<img src="{% static 'Img/logo.png' %}" alt="Logo de la página" />
 					</a>
 				</div>
-				<div class="nav-link">
+				<div class="header-containerNav-profile">
 					<a href="{% url 'profile' %}">Sobre mí</a>
 				</div>
 			</nav>
@@ -39,27 +43,30 @@
 		{% block main %} {% endblock main %}
 		
 		{% block contact %}
-			<section class="section-contact">
-				<div class="contact">
-					<img src="{% static 'img/013-newsletter.png' %}" alt="" />
-					<div class="contact-info">
+			<section class="contactSection">
+				<div class="contactSection-ways">
+					<img src="{% static 'Img/013-newsletter.png' %}" alt="Imagen de contacto" />
+					<div class="contactSection-ways-info">
 						<a href="">Contacto</a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
 				</div>
-				<div class="contact">
-					<img src="{% static 'img/006-like.png' %}" alt="" />
-					<div class="contact-info">
-						<a href="">Escribe</a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<div class="contactSection-ways">
+					<img src="{% static 'Img/006-like.png' %}" alt="Imagen de contacto" />
+					<div class="contactSection-ways-info">
+						<a href="">Contacto</a>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
 				</div>
 			</section>
 		{% endblock contact %}
 
 		{% block footer %}
-			<footer>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+			<footer class="footer">
+				<div class="footer-content">
+					<p class="footer-content-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<p class="footer-content-copyright">© Roel Alex</p>
+				</div>
 			</footer>
 		{% endblock footer %}
 	</body>

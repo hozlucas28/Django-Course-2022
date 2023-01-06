@@ -1,0 +1,483 @@
+/* -------------------------------------------------------------------------- */
+/*                                IMPORTACIONES                               */
+/* -------------------------------------------------------------------------- */
+
+@import url(main.css);
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTENIDO                                 */
+/* -------------------------------------------------------------------------- */
+
+.main {
+	display: grid;
+}
+
+/* ------------------------------ Reutilizables ----------------------------- */
+
+.main-blogButton {
+	padding: 10px 15px;
+	border: 1px solid #e6162e;
+	color: black;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.main-blogButton:hover {
+	color: white;
+	background-color: #e6162e;
+	opacity: 0.8;
+}
+
+/* --------------------------------- Noticia -------------------------------- */
+
+.main-containerNew {
+	padding: 10px 80px 40px;
+	background-color: #e6e9ed;
+}
+
+.main-containerNew-content {
+	display: grid;
+	grid-template-rows: 2fr;
+	grid-template-columns: 2fr 1fr;
+}
+
+.main-containerNew-content img {
+	margin: 10px 0px;
+	width: 85%;
+	display: inline-block;
+	grid-column: 1;
+}
+
+.main-containerNew-content-info {
+	grid-column: 2;
+}
+
+.main-containerNew-content-info h2 {
+	margin-top: 20px;
+}
+
+.main-containerNew-content-info p {
+	margin: 30px 0px;
+}
+
+/* --------------------------- Últimos Blog spots --------------------------- */
+
+.main-containerPosts {
+	padding: 0px 80px 40px;
+}
+
+.main-containerPosts h3 {
+	padding: 20px 0px;
+	text-align: center;
+	border-bottom: 1px solid #cdd2da;
+}
+
+.main-containerPosts-Blog {
+	margin-bottom: 50px;
+	padding: 15px;
+	max-width: 32%;
+	display: inline-block;
+}
+
+.main-containerPosts-Blog img {
+	width: 100%;
+}
+
+.main-containerPosts-Blog h4 {
+	margin: 20px 0px;
+}
+
+.main-containerPosts-Blog p {
+	margin-bottom: 35px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                PIE DE PÁGINA                               */
+/* -------------------------------------------------------------------------- */
+
+.footer {
+	width: 100%;
+	height: 80px;
+	border-top: 35px solid #e6162e;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #22272d;
+}
+
+.footer-content {
+	color: white;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+.footer-content-info {
+	grid-column: 2;
+}
+
+.footer-content-copyright {
+	text-align: end;
+	grid-column: 3;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              DISEÑO RESPONSIVO                             */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 740px) {
+	.main-containerNew {
+		padding: 10px 10px 15px;
+	}
+
+	.main-containerNew-content {
+		grid-template-columns: 2fr;
+	}
+
+	.main-containerNew-content img {
+		width: 50%;
+		display: inline-block;
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info {
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info h2 {
+		margin-top: 0px;
+	}
+
+	.main-containerNew-content-info p {
+		margin: 10px 0px 20px;
+	}
+
+	.main-containerPosts {
+		padding: 0px 10px 40px;
+	}
+
+	.main-containerPosts-Blog {
+		margin-bottom: 25px;
+		padding: 5px;
+		max-width: 80%;
+	}
+
+	.main-containerPosts-Blog img {
+		width: 50%;
+	}
+
+	.main-containerPosts-Blog h4 {
+		margin: 10px 0px;
+	}
+
+	.main-containerPosts-Blog p {
+		margin-bottom: 15px;
+	}
+
+	.footer {
+		width: 100%;
+		height: 100%;
+		border-top: 25px solid #e6162e;
+	}
+
+	.footer-content {
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-content-info {
+		text-align: center;
+		align-self: center;
+		grid-column: 1;
+	}
+
+	.footer-content-copyright {
+		align-self: center;
+		text-align: center;
+		grid-column: 2;
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.main-containerNew {
+		padding: 10px 10px 15px;
+	}
+
+	.main-containerNew-content {
+		grid-template-columns: 2fr;
+	}
+
+	.main-containerNew-content img {
+		width: 50%;
+		display: inline-block;
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info {
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info h2 {
+		margin-top: 0px;
+	}
+
+	.main-containerNew-content-info p {
+		margin: 10px 0px 20px;
+	}
+
+	.main-containerPosts {
+		padding: 0px 10px 40px;
+	}
+
+	.main-containerPosts-Blog {
+		margin-bottom: 25px;
+		padding: 5px;
+		max-width: 80%;
+	}
+
+	.main-containerPosts-Blog img {
+		width: 50%;
+	}
+
+	.main-containerPosts-Blog h4 {
+		margin: 10px 0px;
+	}
+
+	.main-containerPosts-Blog p {
+		margin-bottom: 15px;
+	}
+
+	.footer {
+		width: 100%;
+		height: 100%;
+		border-top: 25px solid #e6162e;
+	}
+
+	.footer-content {
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-content-info {
+		text-align: center;
+		align-self: center;
+		grid-column: 1;
+	}
+
+	.footer-content-copyright {
+		align-self: center;
+		text-align: center;
+		grid-column: 2;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.main-containerNew {
+		padding: 10px 10px 15px;
+	}
+
+	.main-containerNew-content {
+		grid-template-columns: 2fr;
+	}
+
+	.main-containerNew-content img {
+		width: 75%;
+		display: inline-block;
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info {
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info h2 {
+		margin-top: 0px;
+	}
+
+	.main-containerNew-content-info p {
+		margin: 10px 0px 20px;
+	}
+
+	.main-containerPosts {
+		padding: 0px 10px 40px;
+	}
+
+	.main-containerPosts-Blog {
+		margin-bottom: 25px;
+		padding: 5px;
+		max-width: 80%;
+	}
+
+	.main-containerPosts-Blog h4 {
+		margin: 10px 0px;
+	}
+
+	.main-containerPosts-Blog p {
+		margin-bottom: 15px;
+	}
+
+	.footer {
+		width: 100%;
+		height: 100%;
+		border-top: 25px solid #e6162e;
+	}
+
+	.footer-content {
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-content-info {
+		text-align: center;
+		align-self: center;
+		grid-column: 1;
+	}
+
+	.footer-content-copyright {
+		align-self: center;
+		text-align: center;
+		grid-column: 2;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.main-containerNew {
+		padding: 10px 10px 15px;
+	}
+
+	.main-containerNew-content {
+		grid-template-columns: 2fr;
+	}
+
+	.main-containerNew-content img {
+		width: 75%;
+		display: inline-block;
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info {
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info h2 {
+		margin-top: 0px;
+	}
+
+	.main-containerNew-content-info p {
+		margin: 10px 0px 20px;
+	}
+
+	.main-containerPosts {
+		padding: 0px 10px 40px;
+	}
+
+	.main-containerPosts-Blog {
+		margin-bottom: 25px;
+		padding: 5px;
+		max-width: 80%;
+	}
+
+	.main-containerPosts-Blog h4 {
+		margin: 10px 0px;
+	}
+
+	.main-containerPosts-Blog p {
+		margin-bottom: 15px;
+	}
+
+	.footer {
+		width: 100%;
+		height: 100%;
+		border-top: 25px solid #e6162e;
+	}
+
+	.footer-content {
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-content-info {
+		text-align: center;
+		align-self: center;
+		grid-column: 1;
+	}
+
+	.footer-content-copyright {
+		align-self: center;
+		text-align: center;
+		grid-column: 2;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.main-containerNew {
+		padding: 10px 10px 15px;
+	}
+
+	.main-containerNew-content {
+		grid-template-columns: 2fr;
+	}
+
+	.main-containerNew-content img {
+		width: 75%;
+		display: inline-block;
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info {
+		grid-column: 1;
+	}
+
+	.main-containerNew-content-info h2 {
+		margin-top: 0px;
+	}
+
+	.main-containerNew-content-info p {
+		margin: 10px 0px 20px;
+	}
+
+	.main-containerPosts {
+		padding: 0px 10px 40px;
+	}
+
+	.main-containerPosts-Blog {
+		margin-bottom: 25px;
+		padding: 5px;
+		max-width: 80%;
+	}
+
+	.main-containerPosts-Blog h4 {
+		margin: 10px 0px;
+	}
+
+	.main-containerPosts-Blog p {
+		margin-bottom: 15px;
+	}
+
+	.footer {
+		width: 100%;
+		height: 100%;
+		border-top: 25px solid #e6162e;
+	}
+
+	.footer-content {
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-content-info {
+		text-align: center;
+		align-self: center;
+		grid-column: 1;
+	}
+
+	.footer-content-copyright {
+		align-self: center;
+		text-align: center;
+		grid-column: 2;
+	}
+}

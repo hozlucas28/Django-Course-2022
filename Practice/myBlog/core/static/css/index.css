@@ -1,0 +1,240 @@
+/* -------------------------------------------------------------------------- */
+/*                                IMPORTACIONES                               */
+/* -------------------------------------------------------------------------- */
+
+@import url(main.css);
+
+/* -------------------------------------------------------------------------- */
+/*                               IMAGEN DE FONDO                              */
+/* -------------------------------------------------------------------------- */
+
+.body {
+	top: 0px; /* Atributo para la imagen de fondo */
+	left: 0px; /* Atributo para la imagen de fondo */
+	right: 0px; /* Atributo para la imagen de fondo */
+	bottom: 0px; /* Atributo para la imagen de fondo */
+	position: fixed; /* Atributo para la imagen de fondo */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTENIDO                                 */
+/* -------------------------------------------------------------------------- */
+
+.main {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	background-size: cover;
+	background-image: url('../Img/cover.png'); /* "../" vuelve a la carpeta anterior */
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.main-container {
+	margin-top: 80px;
+	height: 350px;
+	display: grid;
+	grid-column: 2; /* Mover elementos del contenedor a la segunda columna */
+	justify-items: center;
+}
+
+.main-container-text {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700px;
+	letter-spacing: 10px;
+	color: white;
+}
+
+.main-container-blogsLink {
+	padding: 10px 20px;
+	height: 45px;
+	color: white;
+	font-size: 18px;
+	font-weight: 700px;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #e6162e;
+}
+
+.main-container-blogsLink:hover {
+	background-color: #eb253c;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              DISEÑO RESPONSIVO                             */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1368px) {
+	.main-container {
+		margin: auto;
+		height: 325px;
+	}
+
+	.main-container-text {
+		font-size: 40px;
+		letter-spacing: 12px;
+	}
+}
+
+@media screen and (max-width: 1180px) {
+	.main-container {
+		margin: auto;
+		height: 325px;
+	}
+
+	.main-container-text {
+		font-size: 40px;
+		letter-spacing: 12px;
+	}
+}
+
+@media screen and (max-width: 915px) {
+	.main-container {
+		margin-top: 40px;
+		height: 275px;
+	}
+
+	.main-container-text {
+		font-size: 30px;
+		letter-spacing: 10px;
+	}
+}
+
+@media screen and (max-width: 912px) {
+	.main-container {
+		margin: auto;
+		height: 325px;
+	}
+
+	.main-container-text {
+		font-size: 35px;
+		letter-spacing: 10px;
+	}
+}
+
+@media screen and (max-width: 896px) {
+	.main-container {
+		margin-top: 40px;
+		height: 275px;
+	}
+
+	.main-container-text {
+		font-size: 30px;
+		letter-spacing: 10px;
+	}
+}
+
+@media screen and (max-width: 820px) {
+	.main-container {
+		margin: auto;
+		height: 400px;
+	}
+
+	.main-container-text {
+		font-size: 40px;
+		letter-spacing: 12px;
+	}
+}
+
+@media screen and (max-width: 740px) {
+	.main-container {
+		margin-top: 30px;
+		height: 225px;
+	}
+
+	.main-container-text {
+		font-size: 25px;
+		letter-spacing: 10px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.main-container {
+		margin-top: auto;
+		height: 200px;
+	}
+
+	.main-container-text {
+		font-size: 20px;
+		letter-spacing: 10px;
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.main-container {
+		margin: 35px 15px 0px;
+		height: 200px;
+	}
+
+	.main-container-text {
+		font-size: 20px;
+		letter-spacing: 8px;
+	}
+}
+
+@media screen and (max-width: 653px) {
+	.main-container {
+		margin: 30px auto;
+		height: 150px;
+	}
+
+	.main-container-text {
+		font-size: 20px;
+		letter-spacing: 5px;
+	}
+
+	.main-container-blogsLink {
+		padding: 5px 15px;
+		text-align: center;
+		height: 35px;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.main-container {
+		margin: auto;
+		height: 225px;
+	}
+
+	.main-container-text {
+		font-size: 20px;
+		letter-spacing: 8px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.main-container {
+		margin-top: 120px;
+		height: 350px;
+	}
+
+	.main-container-text {
+		font-size: 30px;
+		letter-spacing: 10px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.main-container {
+		margin-top: 80px;
+		height: 350px;
+	}
+
+	.main-container-text {
+		font-size: 30px;
+		letter-spacing: 10px;
+	}
+}
+
+@media screen and (max-width: 280px) {
+	.main-container {
+		margin: auto 5px;
+		height: 275px;
+	}
+
+	.main-container-text {
+		font-size: 25px;
+		letter-spacing: 5px;
+	}
+}

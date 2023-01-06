@@ -1,18 +1,25 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
 	Blog Personal - Inicio
 {% endblock title %}
 
+{% block CSSStylesheets %}
+	<link rel="stylesheet" href="{% static 'CSS/index.css' %}" />
+{% endblock CSSStylesheets %}
+
+
 {% block bodyClass %}
-	class="home-body"
+	class="body"
 {% endblock bodyClass %}
 
 {% block main %}
-	<main class="home-main">
+	<main class="main">
 		<div class="main-container">
-			<p class="main-container__text">Conoce las novedades y noticias del Mundo Tegnológico</p>
-			<a class="main-container__link" href="{% url 'blogs' %}">Entra ya!</a>
+			<p class="main-container-text">Conoce las novedades y noticias del mundo tecnológico.</p>
+			<a class="main-container-blogsLink" href="{% url 'blogs' %}">Entra ya!</a>
 		</div>
 	</main>
 {% endblock main %}

@@ -6,31 +6,37 @@
 	Blog Personal - Blogs
 {% endblock title %}
 
+{% block CSSStylesheets %}
+    <link rel="stylesheet" href="{% static 'CSS/blogs.css' %}" />
+{% endblock CSSStylesheets %}
+
 {% block main %}
-    <main class="blogs-main">
-        <section class="news">
-            <div class="news-content">
-                <h3>Noticias</h3>
-                <img src="{{ firstPost.image.url }}" alt="img de blog">
-                <div class="news-info">
-                    <h2>{{ firstPost.title }}</h2>
-                    <p>{{ firstPost.description }}</p>
-                    <a class="blogs-btn" href="{% url 'post' firstPost.id %}">Leer más</a>
-                </div>
-            </div>
-        </section>
-        <section class="posts">
-            <h3>Últimos Blogspost</h3>
+    <main class="main">
+		<!-- Noticia -->
+		<section class="main-containerNew">
+			<div class="main-containerNew-content">
+				<h3>Noticia</h3>
+				<img src="{{ firstPost.image.url }}" alt="Imagen del blog" />
+				<div class="main-containerNew-content-info">
+					<h2>{{ firstPost.title }}</h2>
+					<p>{{ firstPost.description }}</p>
+					<a class="main-blogButton" href="{% url 'post' firstPost.id %}">Leer más</a>
+				</div>
+			</div>
+		</section>
+		<!-- Últimos Blog spots -->
+		<section class="main-containerPosts">
+			<h3>Últimos Blogspots</h3>
             {% for post in posts %}
-                <div class="posts-blog">
-                    <img src="{{ post.image.url }}" alt="">
+                <div class="main-containerPosts-Blog">
+                    <img src="{{ post.image.url }}" alt="Imagen del blog" />
                     <h4>{{ post.title }}</h4>
                     <p>{{ post.description }}</p>
-                    <a class="blogs-btn" href="{% url 'post' post.id %}">Leer más</a>
+                    <a class="main-blogButton" href="{% url 'post' post.id %}">Leer más</a>
                 </div>
             {% endfor %}
-        </section>
-    </main>
+		</section>
+	</main>
 {% endblock main %}
 
 {% block contact %} {% endblock contact %}

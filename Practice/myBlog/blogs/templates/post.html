@@ -6,15 +6,19 @@
 	Blog Personal - {{ post.title }}
 {% endblock title %}
 
+{% block CSSStylesheets %}
+    <link rel="stylesheet" href="{% static 'CSS/post.css' %}" />
+{% endblock CSSStylesheets %}
+
 {% block main %}
-    <main class="main-blog">
-        <div class="main-blog__content">
-            <img src="{% static 'img/pc-img.jpg' %}" alt="">
-            <article class="blog-content__article">
-                <h4>Noticia</h4>
-                <h1>{{ post.title }}</h1>
-                <div>{{ post.content|safe }}</div>
-            </article>
-        </div>
-    </main>
+    <main class="main">
+		<div class="main-containerPost">
+			<img src="{{ post.image.url }}" alt="Imagen del artículo" />
+			<article class="main-containerPost-article">
+				<h4>Noticias</h4>
+				<h1>{{ post.title }}</h1>
+				<div>{{ post.content|safe }}</div>
+			</article>
+		</div>
+	</main>
 {% endblock main %}

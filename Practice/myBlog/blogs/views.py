@@ -9,6 +9,7 @@ from .models import Post
 def index(request):
     firstPost = Post.objects.first()  # Obtengo el primer registro de la base de datos.
     posts = Post.objects.all()
+    print(posts[0].image)
     return render(request, "blogs.html", {"firstPost": firstPost, "posts": posts})
 
 

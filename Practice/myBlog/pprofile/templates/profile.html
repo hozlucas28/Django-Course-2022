@@ -6,30 +6,36 @@
 	Blog Personal - Sobre mí
 {% endblock title %}
 
+{% block CSSStylesheets %}
+    <link rel="stylesheet" href="{% static 'CSS/profile.css' %}" />
+{% endblock CSSStylesheets %}
+
 {% block main %}
-    <main class="main-profile">
-        <section class="profile">
-            <div class="profile-img">
-                <img src="{% static 'img/profile-pic.jpg' %}" alt="">
-            </div>    
-            <div class="profile-info">
-                <h2>Hola, mi nombre es Alex Roel</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Molestias esse, qui nisi deserunt animi earum ad rerum 
-                    modi sunt explicabo minus atque dolorem officia officiis 
-                    laudantium consequuntur perferendis nesciunt possimus.
-                </p>
-            </div>           
-        </section>
-        <section class="project-container">
-            <h3>Proyectos</h3>
-            {% for project in projects %}
-                <div class="project">
-                    <h4>{{ project.title }}</h4>
-                    <p>{{ project.description }}</p>
-                </div>
-            {% endfor %}
-        </section>
-    </main>
+    <main class="main">
+		<section class="main-profileSection">
+			<div>
+				<img src="{% static 'Img/profile-pic.jpg' %}" alt="Imagen de Alex Roel" />
+			</div>
+			<div>
+				<h2>Hola, mi nombre es Alex Roel!</h2>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti repellat porro voluptates eum nobis, officiis,
+					minus at nam cupiditate id odit ipsam quas ea a dignissimos voluptatibus. Voluptas, fugit illo? Lorem ipsum dolor
+					sit, amet consectetur adipisicing elit. Placeat, suscipit! Ut placeat reprehenderit nobis est natus ea sint magni
+					deleniti, suscipit aperiam maxime dolor fugit? Hic dolores eum odio aspernatur?
+				</p>
+			</div>
+		</section>
+		<section class="main-projectsSection">
+			<h3>Proyectos</h3>
+            <div class="main-projectsSection-projects">
+                {% for project in projects %}
+                    <div class="main-projectsSection-project">
+                        <h4>{{ project.title }}</h4>
+                        <p>{{ project.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+		</section>
+	</main>
 {% endblock main %}
