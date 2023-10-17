@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/88015479/210152416-3f15fe96-a136-4863-b328-4960ce903dac.png" width="300">
+    <img src="./.github/django-logo.png" width="300">
 </p>
 
 <h2>
